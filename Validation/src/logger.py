@@ -2,12 +2,16 @@ import logging
 import os
 import time
 
-# Create logs directory if not exists
+# Create logs directory if it doesn't exist
 log_dir = os.path.join(os.path.dirname(__file__), "../logs")
 if not os.path.exists(log_dir):
     os.makedirs(log_dir)
 
 LOG_FILE = os.path.join(log_dir, "selenium_log.log")
+
+# Clear log file at the start of execution
+with open(LOG_FILE, "w"):
+    pass  # This empties the file
 
 # Configure logging
 logging.basicConfig(
