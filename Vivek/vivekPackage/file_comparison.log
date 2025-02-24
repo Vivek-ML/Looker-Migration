@@ -1,0 +1,2 @@
+2025-02-16 12:18:36 - ERROR - \u274c Error reading the Looker file: 'utf-8' codec can't decode byte 0xff in position 0: invalid start byte
+2025-02-16 12:18:36 - ERROR - \u274c Skipping comparison due to missing files.
