@@ -44,7 +44,7 @@ class SeleniumRunner:
                 EC.visibility_of_element_located((By.ID, "email"))
             )
             email_element.send_keys(self.config.get("CREDENTIALS", "tableau_email"))
-            log_message("<SPEED_METER>Email entered successfully.", "INFO")
+            log_message("<SPEED_METER> Email entered successfully.", "INFO")
 
             login_button = WebDriverWait(self.driver, 20).until(
                 EC.element_to_be_clickable((By.ID, "login-submit"))
@@ -109,7 +109,7 @@ class SeleniumRunner:
         try:
             dashboard_url = self.config.get("SELENIUM", "tableau_dashboard_url")
             self.driver.get(dashboard_url)
-            log_message(f"<SPEED_METER>Navigating to Tableau dashboard", "INFO")
+            log_message(f"<SPEED_METER> Navigating to Tableau dashboard", "INFO")
             time.sleep(2)
             self.driver.refresh()
             time.sleep(12)
@@ -186,7 +186,7 @@ class SeleniumRunner:
 
             # Log the extracted dashboard names
             for i, name in enumerate(self.dashboard_names, 1):
-                log_message(f"Dashboard {i}: {name}")
+                log_message(f"<RIGHT_ARROW> Tableau Dashboard {i}: {name}")
 
             time.sleep(2)
 
@@ -274,7 +274,7 @@ class SeleniumRunner:
                         EC.element_to_be_clickable((By.XPATH, "//div[@class='f1u2kjnq'][contains(.,'CSV')]"))
                     )
                     csv_option.click()
-                    log_message("<RIGHT_ARROW>CSV format selected", "ERROR")
+                    #log_message("<RIGHT_ARROW> CSV format selected", "ERROR")
                     time.sleep(1)
 
                     # Click Final Download Button
@@ -283,11 +283,15 @@ class SeleniumRunner:
                             (By.XPATH, "//button[@data-tb-test-id='export-crosstab-export-Button']"))
                     )
                     final_download_button.click()
-                    log_message("Download started")
+                    #log_message("Download started")
                     # Wait for Download Completion
-                    download_path = "C:\\Users\\User\\Downloads"  # Double backslashes
+                    # Detect OS and set the correct path
+                    if os.name == 'nt':  # Windows
+                        download_path = r"C:\Users\User\Downloads"
+                    else:  # Linux (GCP VM)
+                        download_path = "/home/vivek/Downloads"  # Double backslashes
 
-                    file_path = f"{download_path}\\{dashboard_name}.csv"
+                    file_path = os.path.join(download_path, f"{dashboard_name}.csv")
                     timeout = 60
                     start_time = time.time()
 
@@ -297,7 +301,7 @@ class SeleniumRunner:
                             log_message(f"Download failed for {dashboard_name}", "ERROR")
                             break
                     else:
-                        log_message(f"Downloaded successfully: {dashboard_name}.csv", "INFO")
+                        log_message(f"<DOWNLOAD> Downloaded successfully: {dashboard_name}.csv", "INFO")
 
                 except Exception as e:
                     log_message(f"Error processing {dashboard_name}: {e}", "ERROR")
@@ -413,8 +417,8 @@ class SeleniumRunner:
                             # Use JavaScript click if normal click fails
                             self.driver.execute_script("arguments[0].click();", three_dots_menu)
 
-                        log_message(f"<RIGHT_ARROW> Hovered and clicked three dots menu on attempt {attempt + 1}",
-                                    "INFO")
+                        #log_message(f"<RIGHT_ARROW> Hovered and clicked three dots menu on attempt {attempt + 1}",
+                                   # "INFO")
                         break  # Exit loop on success
 
                     except Exception as e:
@@ -456,7 +460,7 @@ class SeleniumRunner:
                         EC.element_to_be_clickable((By.XPATH, "//button[@id='qr-export-modal-download']"))
                     )
                     download_button.click()
-                    log_message("<DOWNLOAD> Download button clicked.", "INFO")
+                    log_message(f"<DOWNLOAD> Download button clicked for {title}.", "INFO")
                 except:
                     log_message("<DOWNLOAD> Download button was not clicked.", "ERROR")
 
@@ -466,12 +470,18 @@ class SeleniumRunner:
                 print(f"Error processing {title}: {e}")
 
         for index, title in enumerate(self.looker_dashboard_names, start=1):
-            download_path = f"C:\\Users\\User\\Downloads\\{title} (1).csv"
-            log_message(f"Download_path {download_path}")
+            if os.name == 'nt':  # Windows
+                download_path = r"C:\Users\User\Downloads"
+            else:  # Linux (GCP VM)
+                download_path = "/home/vivek/Downloads"
+
+            # Example usage
+            download_file_path = os.path.join(download_path, f"{title} (1).csv")
+            #log_message(f"Download_path {download_file_path}")
             timeout = 60
             start_time = time.time()
 
-            while not os.path.exists(download_path):
+            while not os.path.exists(download_file_path):
                 time.sleep(1)
                 if time.time() - start_time > timeout:
                     log_message("<RIGHT_ARROW> Download failed: File not found.", "ERROR")
@@ -486,9 +496,13 @@ class SeleniumRunner:
     def compare_tableau_and_looker_files(self):
         try:
             for tableau_dashboard_name in self.dashboard_names:
+                if os.name == 'nt':  # Windows
+                    download_path = r"C:\Users\User\Downloads"
+                else:  # Linux (GCP VM)
+                    download_path = "/home/vivek/Downloads"
                 looker_dashboard_name = f"{tableau_dashboard_name} (1)"
-                tableau_file_path = f"C:\\Users\\User\\Downloads\\{tableau_dashboard_name}.csv"
-                looker_file_path = f"C:\\Users\\User\\Downloads\\{looker_dashboard_name}.csv"
+                tableau_file_path = os.path.join(download_path, f"{tableau_dashboard_name}.csv")
+                looker_file_path = os.path.join(download_path, f"{looker_dashboard_name}.csv")
 
                 # Check if both files exist
                 if not os.path.exists(tableau_file_path) or not os.path.exists(looker_file_path):
