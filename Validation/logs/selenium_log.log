@@ -1,63 +1,69 @@
-2025-02-24 16:36:26,108 | INFO | <SPEED_METER> Opening Tableau login page...
-2025-02-24 16:36:26,159 | INFO | <SPEED_METER>Email entered successfully.
-2025-02-24 16:36:26,647 | INFO | <SPEED_METER>Login button clicked.
-2025-02-24 16:36:27,042 | INFO | <SPEED_METER> URI entered successfully
-2025-02-24 16:36:29,949 | INFO | <SPEED_METER> Continue button clicked
-2025-02-24 16:36:29,965 | INFO | <SPEED_METER> Promo content is visible
-2025-02-24 16:36:30,079 | INFO | <SPEED_METER> Password entered successfully
-2025-02-24 16:36:30,149 | INFO | <SPEED_METER> Signed in successfully
-2025-02-24 16:36:37,932 | INFO | <SPEED_METER>Navigating to Tableau dashboard
-2025-02-24 16:37:01,260 | INFO | <SPEED_METER> Download button clicked on attempt 1
-2025-02-24 16:37:04,575 | INFO | <SPEED_METER> Crosstab option clicked
-2025-02-24 16:37:10,491 | INFO | Dashboard 1: Bar Chart
-2025-02-24 16:37:10,491 | INFO | Dashboard 2: Line Chart
-2025-02-24 16:37:10,492 | INFO | Dashboard 3: Pie Chart
-2025-02-24 16:37:10,492 | INFO | Dashboard 4: Scatter Plots
-2025-02-24 16:37:29,203 | INFO | Selected dashboard: Scatter Plots
-2025-02-24 16:37:31,657 | ERROR | <RIGHT_ARROW>CSV format selected
-2025-02-24 16:37:32,854 | INFO | Download started
-2025-02-24 16:37:32,855 | INFO | Downloaded successfully: Scatter Plots.csv
-2025-02-24 16:37:45,153 | INFO | Selected dashboard: Pie Chart
-2025-02-24 16:37:47,401 | ERROR | <RIGHT_ARROW>CSV format selected
-2025-02-24 16:37:48,671 | INFO | Download started
-2025-02-24 16:37:48,671 | INFO | Downloaded successfully: Pie Chart.csv
-2025-02-24 16:38:01,814 | INFO | Selected dashboard: Line Chart
-2025-02-24 16:38:04,067 | ERROR | <RIGHT_ARROW>CSV format selected
-2025-02-24 16:38:05,318 | INFO | Download started
-2025-02-24 16:38:05,320 | INFO | Downloaded successfully: Line Chart.csv
-2025-02-24 16:38:17,059 | ERROR | <RIGHT_ARROW>CSV format selected
-2025-02-24 16:38:18,320 | INFO | Download started
-2025-02-24 16:38:18,322 | INFO | Downloaded successfully: Bar Chart.csv
-2025-02-24 16:38:18,323 | INFO | <RIGHT_ARROW> NoW opening the Looker Site to download the CSV file
-2025-02-24 16:38:24,312 | INFO | <RIGHT_ARROW> Email was entered.
-2025-02-24 16:38:25,539 | INFO | <RIGHT_ARROW> Password was entered.
-2025-02-24 16:38:32,201 | INFO | <RIGHT_ARROW> Login button clicked.
-2025-02-24 16:38:34,246 | INFO | <RIGHT_ARROW> Home page loaded.
-2025-02-24 16:39:02,833 | INFO | <RIGHT_ARROW> Hovered and clicked three dots menu on attempt 1
-2025-02-24 16:39:28,815 | INFO | <RIGHT_ARROW> Hovered and clicked three dots menu on attempt 1
-2025-02-24 16:39:54,722 | INFO | <RIGHT_ARROW> Hovered and clicked three dots menu on attempt 1
-2025-02-24 16:40:20,723 | INFO | <RIGHT_ARROW> Hovered and clicked three dots menu on attempt 1
-2025-02-24 16:40:32,833 | INFO | Download_path C:\Users\User\Downloads\Bar Chart (1).csv
-2025-02-24 16:40:32,833 | INFO |  <DOWNLOAD> Bar Chart Looker CSV file is successfully downloaded!
-2025-02-24 16:40:32,834 | INFO | Download_path C:\Users\User\Downloads\Line Chart (1).csv
-2025-02-24 16:40:32,834 | INFO |  <DOWNLOAD> Line Chart Looker CSV file is successfully downloaded!
-2025-02-24 16:40:32,834 | INFO | Download_path C:\Users\User\Downloads\Pie Chart (1).csv
-2025-02-24 16:40:32,836 | INFO |  <DOWNLOAD> Pie Chart Looker CSV file is successfully downloaded!
-2025-02-24 16:40:32,837 | INFO | Download_path C:\Users\User\Downloads\Scatter Plots (1).csv
-2025-02-24 16:40:32,837 | INFO |  <DOWNLOAD> Scatter Plots Looker CSV file is successfully downloaded!
-2025-02-24 16:40:32,837 | INFO | <DOWNLOAD> All Looker CSV files downloaded.
-2025-02-24 16:40:32,875 | ERROR | Missing columns in Looker 'Bar Chart (1)': country, unnamed: 0
-2025-02-24 16:40:32,886 | WARNING | Extra columns in Looker 'Bar Chart (1)': category, sales
-2025-02-24 16:40:32,902 | WARNING | Row count mismatch in 'Bar Chart': Tableau (4) vs Looker (3)
-2025-02-24 16:40:32,902 | WARNING | Skipping comparison for 'Bar Chart' due to error: Can only compare identically-labeled (both index and columns) DataFrame objects
-2025-02-24 16:40:32,910 | ERROR | Missing columns in Looker 'Line Chart (1)': year of order date
-2025-02-24 16:40:32,911 | WARNING | Extra columns in Looker 'Line Chart (1)': order date year
-2025-02-24 16:40:32,917 | WARNING | Row count mismatch in 'Line Chart': Tableau (8) vs Looker (4)
-2025-02-24 16:40:32,918 | WARNING | Skipping comparison for 'Line Chart' due to error: Can only compare identically-labeled (both index and columns) DataFrame objects
-2025-02-24 16:40:32,938 | ERROR | Differences found in 'Pie Chart':
-2025-02-24 16:40:32,943 | ERROR | Row 0: ('category', 'self'): Tableau='nan', Looker='nan', ('category', 'other'): Tableau='nan', Looker='nan', ('sales', 'self'): Tableau='nan', Looker='nan', ('sales', 'other'): Tableau='nan', Looker='nan'
-2025-02-24 16:40:32,944 | ERROR | Row 1: ('category', 'self'): Tableau='nan', Looker='nan', ('category', 'other'): Tableau='nan', Looker='nan', ('sales', 'self'): Tableau='nan', Looker='nan', ('sales', 'other'): Tableau='nan', Looker='nan'
-2025-02-24 16:40:32,946 | ERROR | Row 2: ('category', 'self'): Tableau='nan', Looker='nan', ('category', 'other'): Tableau='nan', Looker='nan', ('sales', 'self'): Tableau='nan', Looker='nan', ('sales', 'other'): Tableau='nan', Looker='nan'
-2025-02-24 16:40:32,954 | WARNING | Row count mismatch in 'Scatter Plots': Tableau (8) vs Looker (4)
-2025-02-24 16:40:32,955 | WARNING | Skipping comparison for 'Scatter Plots' due to error: Can only compare identically-labeled (both index and columns) DataFrame objects
-2025-02-24 16:40:35,355 | INFO | Selenium session closed.
+2025-02-25 08:30:08,810 | INFO | <SPEED_METER> Opening Tableau login page...
+2025-02-25 08:30:09,318 | INFO | <SPEED_METER>Email entered successfully.
+2025-02-25 08:30:10,824 | INFO | <SPEED_METER>Login button clicked.
+2025-02-25 08:30:11,391 | INFO | <SPEED_METER> URI entered successfully
+2025-02-25 08:30:23,972 | INFO | <SPEED_METER> Continue button clicked
+2025-02-25 08:30:24,018 | INFO | <SPEED_METER> Promo content is visible
+2025-02-25 08:30:24,117 | INFO | <SPEED_METER> Password entered successfully
+2025-02-25 08:30:24,288 | INFO | <SPEED_METER> Signed in successfully
+2025-02-25 08:30:33,231 | INFO | <SPEED_METER>Navigating to Tableau dashboard
+2025-02-25 08:30:56,276 | INFO | <SPEED_METER> Download button clicked on attempt 1
+2025-02-25 08:30:59,661 | INFO | <SPEED_METER> Crosstab option clicked
+2025-02-25 08:31:01,979 | INFO | Dashboard 1: Bar Chart
+2025-02-25 08:31:01,980 | INFO | Dashboard 2: Line Chart
+2025-02-25 08:31:01,980 | INFO | Dashboard 3: Pie Chart
+2025-02-25 08:31:01,980 | INFO | Dashboard 4: Scatter Plots
+2025-02-25 08:31:20,601 | INFO | Selected dashboard: Scatter Plots
+2025-02-25 08:31:23,076 | ERROR | <RIGHT_ARROW>CSV format selected
+2025-02-25 08:31:24,220 | INFO | Download started
+2025-02-25 08:31:26,235 | INFO | Downloaded successfully: Scatter Plots.csv
+2025-02-25 08:31:38,336 | INFO | Selected dashboard: Pie Chart
+2025-02-25 08:31:40,529 | ERROR | <RIGHT_ARROW>CSV format selected
+2025-02-25 08:31:41,684 | INFO | Download started
+2025-02-25 08:31:42,737 | INFO | Downloaded successfully: Pie Chart.csv
+2025-02-25 08:31:54,494 | INFO | Selected dashboard: Line Chart
+2025-02-25 08:31:56,601 | ERROR | <RIGHT_ARROW>CSV format selected
+2025-02-25 08:31:57,713 | INFO | Download started
+2025-02-25 08:31:59,714 | INFO | Downloaded successfully: Line Chart.csv
+2025-02-25 08:32:10,085 | ERROR | <RIGHT_ARROW>CSV format selected
+2025-02-25 08:32:11,229 | INFO | Download started
+2025-02-25 08:32:13,230 | INFO | Downloaded successfully: Bar Chart.csv
+2025-02-25 08:32:13,230 | INFO | <RIGHT_ARROW> NoW opening the Looker Site to download the CSV file
+2025-02-25 08:32:17,325 | INFO | <RIGHT_ARROW> Email was entered.
+2025-02-25 08:32:18,370 | INFO | <RIGHT_ARROW> Password was entered.
+2025-02-25 08:32:28,144 | INFO | <RIGHT_ARROW> Login button clicked.
+2025-02-25 08:32:30,205 | INFO | <RIGHT_ARROW> Home page loaded.
+2025-02-25 08:32:48,525 | INFO | <RIGHT_ARROW> Hovered and clicked three dots menu on attempt 1
+2025-02-25 08:32:59,257 | INFO | <DOWNLOAD> Download button clicked.
+2025-02-25 08:33:15,418 | INFO | <RIGHT_ARROW> Hovered and clicked three dots menu on attempt 1
+2025-02-25 08:33:26,352 | INFO | <DOWNLOAD> Download button clicked.
+2025-02-25 08:33:41,907 | INFO | <RIGHT_ARROW> Hovered and clicked three dots menu on attempt 1
+2025-02-25 08:33:53,774 | INFO | <DOWNLOAD> Download button clicked.
+2025-02-25 08:34:09,563 | INFO | <RIGHT_ARROW> Hovered and clicked three dots menu on attempt 1
+2025-02-25 08:34:19,798 | INFO | <DOWNLOAD> Download button clicked.
+2025-02-25 08:34:21,798 | INFO | Download_path C:\Users\User\Downloads\Bar Chart (1).csv
+2025-02-25 08:34:21,798 | INFO |  <DOWNLOAD> Bar Chart Looker CSV file is successfully downloaded!
+2025-02-25 08:34:21,798 | INFO | Download_path C:\Users\User\Downloads\Line Chart (1).csv
+2025-02-25 08:34:21,798 | INFO |  <DOWNLOAD> Line Chart Looker CSV file is successfully downloaded!
+2025-02-25 08:34:21,798 | INFO | Download_path C:\Users\User\Downloads\Pie Chart (1).csv
+2025-02-25 08:34:21,798 | INFO |  <DOWNLOAD> Pie Chart Looker CSV file is successfully downloaded!
+2025-02-25 08:34:21,798 | INFO | Download_path C:\Users\User\Downloads\Scatter Plots (1).csv
+2025-02-25 08:34:21,799 | INFO |  <DOWNLOAD> Scatter Plots Looker CSV file is successfully downloaded!
+2025-02-25 08:34:21,799 | INFO | <DOWNLOAD> All Looker CSV files downloaded.
+2025-02-25 08:34:21,878 | ERROR | Missing columns in Looker 'Bar Chart (1)': country, unnamed: 0
+2025-02-25 08:34:21,890 | WARNING | Extra columns in Looker 'Bar Chart (1)': category, sales
+2025-02-25 08:34:21,902 | WARNING | Row count mismatch in 'Bar Chart': Tableau (4) vs Looker (3)
+2025-02-25 08:34:21,903 | WARNING | Skipping comparison for 'Bar Chart' due to error: Can only compare identically-labeled (both index and columns) DataFrame objects
+2025-02-25 08:34:21,927 | ERROR | Missing columns in Looker 'Line Chart (1)': year of order date
+2025-02-25 08:34:21,928 | WARNING | Extra columns in Looker 'Line Chart (1)': order date year
+2025-02-25 08:34:21,931 | WARNING | Row count mismatch in 'Line Chart': Tableau (8) vs Looker (4)
+2025-02-25 08:34:21,931 | WARNING | Skipping comparison for 'Line Chart' due to error: Can only compare identically-labeled (both index and columns) DataFrame objects
+2025-02-25 08:34:21,939 | ERROR | Missing columns in Looker 'Pie Chart (1)': unnamed: 1
+2025-02-25 08:34:21,940 | WARNING | Extra columns in Looker 'Pie Chart (1)': sales
+2025-02-25 08:34:21,948 | ERROR | Differences found in 'Pie Chart':
+2025-02-25 08:34:21,953 | ERROR | Row 0: ('category', 'self'): Tableau='nan', Looker='nan', ('category', 'other'): Tableau='nan', Looker='nan', ('unnamed: 1', 'self'): Tableau='nan', Looker='nan', ('unnamed: 1', 'other'): Tableau='nan', Looker='nan'
+2025-02-25 08:34:21,953 | ERROR | Row 1: ('category', 'self'): Tableau='nan', Looker='nan', ('category', 'other'): Tableau='nan', Looker='nan', ('unnamed: 1', 'self'): Tableau='nan', Looker='nan', ('unnamed: 1', 'other'): Tableau='nan', Looker='nan'
+2025-02-25 08:34:21,953 | ERROR | Row 2: ('category', 'self'): Tableau='nan', Looker='nan', ('category', 'other'): Tableau='nan', Looker='nan', ('unnamed: 1', 'self'): Tableau='nan', Looker='nan', ('unnamed: 1', 'other'): Tableau='nan', Looker='nan'
+2025-02-25 08:34:21,981 | WARNING | Row count mismatch in 'Scatter Plots': Tableau (8) vs Looker (4)
+2025-02-25 08:34:21,981 | WARNING | Skipping comparison for 'Scatter Plots' due to error: Can only compare identically-labeled (both index and columns) DataFrame objects
+2025-02-25 08:34:24,179 | INFO | Selenium session closed.
